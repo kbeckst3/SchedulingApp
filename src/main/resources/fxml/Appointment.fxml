@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import models.TimeField?>
+<VBox prefHeight="444.0" prefWidth="303.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AppointmentController">
+    <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+    </padding>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment" textAlignment="CENTER" wrappingWidth="269.7509765625">
+        <font>
+            <Font size="16.0" />
+        </font>
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+    </Text>
+    <HBox prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="22.0">
+                <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Text>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Type">
+                        <font>
+                            <Font size="14.0" />
+                        </font>
+                    </Text>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="How" />
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name" />
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Coach Name" />
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User ID" />
+                </children>
+            </VBox>
+            <VBox prefHeight="135.0" prefWidth="170.0" spacing="10.0">
+                <children>
+                    <TextField fx:id="appointmentTitle" alignment="TOP_LEFT" prefHeight="27.0" prefWidth="219.0"
+                        promptText="Title" />
+                    <ComboBox fx:id="appointmentType" prefHeight="27.0" prefWidth="207.0"
+                        promptText="Appointment Type" />
+                    <ComboBox fx:id="appointmentMedium" prefHeight="27.0" prefWidth="231.0" promptText="In person" />
+                    <ComboBox fx:id="customerName" prefHeight="27.0" prefWidth="172.0" promptText="Customer Name" />
+                    <ComboBox fx:id="coachName" prefHeight="27.0" prefWidth="209.0" promptText="Coach Name" />
+                    <TextField fx:id="userID" prefHeight="27.0" prefWidth="231.0" promptText="Location" />
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+    <Label text="Start Date &amp; Time" />
+    <HBox prefHeight="44.0" prefWidth="266.0">
+        <children>
+            <DatePicker fx:id="appointmentStartDate" prefHeight="27.0" prefWidth="164.0" promptText="DD//MM/YYYY" />
+            <TimeField fx:id="appointmentStartTime" prefHeight="27.0" prefWidth="101.0" promptText="12:00" />
+            <!--              <ToggleButton fx:id="appointmentStartAM" minWidth="-Infinity" text="AM">-->
+            <!--               <toggleGroup>-->
+            <!--                  <ToggleGroup fx:id="startToggle" />-->
+            <!--               </toggleGroup>-->
+            <!--              </ToggleButton>-->
+            <!--              <ToggleButton fx:id="appointmentStartPM" alignment="TOP_LEFT" minWidth="-Infinity" selected="true" text="PM" toggleGroup="$startToggle" />-->
+        </children>
+    </HBox>
+    <Label layoutX="10.0" layoutY="118.0" text="End Date &amp; Time" />
+    <HBox layoutX="10.0" layoutY="135.0" prefHeight="51.0" prefWidth="266.0">
+        <children>
+            <DatePicker fx:id="appointmentEndDate" prefHeight="27.0" prefWidth="164.0" promptText="DD//MM/YYYY" />
+            <TimeField fx:id="appointmentEndTime" prefHeight="27.0" prefWidth="101.0" promptText="12:00" />
+            <!--            <ToggleButton fx:id="appointmentEndAM" minWidth="-Infinity" text="AM">-->
+            <!--               <toggleGroup>-->
+            <!--                  <ToggleGroup fx:id="endToggle" />-->
+            <!--               </toggleGroup>-->
+            <!--            </ToggleButton>-->
+            <!--            <ToggleButton fx:id="appointmentEndPM" minWidth="-Infinity" selected="true" text="PM" toggleGroup="$endToggle" />-->
+        </children>
+    </HBox>
+    <TextArea fx:id="appointmentDescription" prefHeight="87.0" prefWidth="266.0" promptText="Description..." />
+    <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="266.0" spacing="10.0">
+        <children>
+            <Button mnemonicParsing="false" onAction="#cancelAppointmentWindow" text="Cancel " />
+            <Button mnemonicParsing="false" onAction="#saveAppointment" text="Save">
+                <HBox.margin>
+                    <Insets right="10.0" />
+                </HBox.margin>
+                `
+            </Button>
+        </children>
+    </HBox>
+    <TextField fx:id="appointmentID" cacheShape="false" centerShape="false" editable="false" focusTraversable="false"
+        scaleShape="false" text="0" visible="false" VBox.vgrow="NEVER">
+        <font>
+            <Font size="1.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="NONE" />
+        </cursor>
+    </TextField>
+</VBox>

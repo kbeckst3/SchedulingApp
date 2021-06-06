@@ -1,0 +1,105 @@
+
+DELETE FROM appointments WHERE id < 10000;
+DELETE FROM customers WHERE id < 10000;
+DELETE FROM divisions WHERE id < 10000;
+DELETE FROM countries WHERE id < 10000;
+DELETE FROM users WHERE id < 10000;
+
+-- users
+
+INSERT INTO Users (user_full_name, username, password, user_type, contact_phone, contact_email) VALUES('Keller Beckstead', 'test', 'test', 'admin', '8012947720', 'kellerbeckstead@gmail.com');
+INSERT INTO Users (user_full_name, username, password, user_type, contact_phone, contact_email) VALUES('Amelia Anderson', 'admin', 'test', 'coach','3854244561', 'ameliaanderson@gmail.com');
+INSERT INTO Users (user_full_name, username, password, user_type, contact_phone, contact_email) VALUES('Parker Adair', 'gecko', 'test', 'staff', '7022763891', 'parkeradair@gmail.com');
+
+
+-- countries
+
+INSERT INTO countries (id, country, create_date) VALUES(1, 'U.S',	NOW());
+INSERT INTO countries (id, country, create_date) VALUES(2, 'UK',	NOW());
+INSERT INTO countries (id, country, create_date) VALUES(3, 'Canada',	NOW());
+
+-- divisions
+
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Alabama', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Alaska', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Arizona', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Arkansas', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('California', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Colorado', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Connecticut', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Delaware', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('District of Columbia', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Florida', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Georgia', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Hawaii', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Idaho', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Illinois', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Indiana', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Iowa', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Kansas', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Kentucky', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Louisiana', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Maine', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Maryland', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Massachusetts', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Michigan', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Minnesota', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Mississippi', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Missouri', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Montana', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Nebraska', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Nevada', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('New Hampshire', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('New Jersey', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('New Mexico', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('New York', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('North Carolina', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('North Dakota', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Ohio', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Oklahoma', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Oregon', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Pennsylvania', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Rhode Island', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('South Carolina', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('South Dakota', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Tennessee', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Texas', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Utah', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Vermont', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Virginia', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Washington', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('West Virginia', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Wisconsin', 1 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Wyoming', 1 );
+
+
+
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Alberta', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('British Columbia', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Manitoba', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('New Brunswick', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Newfoundland and Labrador', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Northwest Territories', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Nova Scotia', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Nunavut', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Ontario', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Prince Edward Island', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Québec', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Saskatchewan', 3 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Yukon', 3 );
+
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('England', 2 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Wales', 2 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Scotland', 2 );
+INSERT INTO divisions(division, COUNTRY_ID) VALUES('Northern Ireland', 2 );
+
+-- Customers
+
+INSERT INTO customers (country_id, division_id, customer_full_name, address, city, postal_code, contact_phone, contact_email) VALUES(1, 2, 'Crank Cooper', '53 e 432 N', 'Centerville', '84011', '881-789-8421', 'ccooper@outlook.com');
+INSERT INTO customers (country_id, division_id, customer_full_name, address, city, postal_code, contact_phone, contact_email) VALUES(2, 4, 'Lady McAnderson', '2 Wonder Way', 'London', 'AF343', '302-457-2314', 'lmcanny12@hotmail.com');
+INSERT INTO customers (country_id, division_id, customer_full_name, address, city, postal_code, contact_phone, contact_email) VALUES(1, 49,'Dudley Do-Right', '48 Horse Manor ', 'Dublin', 'CV753', '801-641-7725', 'dudmud@me.com');
+
+-- Appointments
+
+INSERT INTO appointments (customer_id, user_scheduler_id, coach_id, appointment_type, start_date_time, end_date_time, appointment_medium, note, last_updated, last_updated_by) VALUES(1, 1, 1, 'Career', '2020-05-28 12:00:00', '2020-05-28 13:00:00', 'Web', 'this guy is just really excited to work with', NOW(), 1);
+INSERT INTO appointments (customer_id, user_scheduler_id, coach_id, appointment_type, start_date_time, end_date_time, appointment_medium, note, last_updated, last_updated_by) VALUES(1, 1, 1, 'Career', '2020-05-28 12:00:00', '2020-05-28 13:00:00', 'Web', 'this guy is just really excited to work with', NOW(), 1);

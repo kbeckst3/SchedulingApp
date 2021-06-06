@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="213.0" prefWidth="383.0" spacing="10.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignIn">
+    <children>
+        <HBox prefHeight="23.0" prefWidth="289.0">
+            <children>
+                <Text fx:id="signInHeader" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="78.265625">
+                    <font>
+                        <Font name="Arial" size="18.0" />
+                    </font>
+                </Text>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Text fx:id="timezoneLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Zone:" />
+                        <Text fx:id="currentTimeZone" layoutX="10.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current TimeZone....." />
+                    </children>
+                    <HBox.margin>
+                        <Insets left="45.0" />
+                    </HBox.margin>
+                </HBox>
+            </children>
+        </HBox>
+        <VBox prefHeight="103.0" prefWidth="207.0" spacing="5.0">
+            <children>
+                <Text fx:id="usernameLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                <TextField fx:id="username" prefHeight="27.0" prefWidth="196.0" promptText="Username" />
+                <Text fx:id="passwordLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                <TextField fx:id="password" promptText="Password" />
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </VBox>
+        <HBox alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="200.0" spacing="15.0">
+            <children>
+                <Text fx:id="createAccount" accessibleRole="HYPERLINK" strokeType="OUTSIDE" strokeWidth="0.0" text="No account? Request one.">
+                    <font>
+                        <Font size="10.0" />
+                    </font>
+                </Text>
+                <Button fx:id="signInButton" mnemonicParsing="false" onAction="#signInUser" prefHeight="27.0" text="Sign In" />
+            </children>
+            <VBox.margin>
+                <Insets right="15.0" />
+            </VBox.margin>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+    </padding>
+</VBox>
